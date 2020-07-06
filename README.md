@@ -16,7 +16,7 @@ mvn quarkus:dev
 ### Get an Incident
 
 ```
-$ curl http://localhost:8080/demo/inc
+$ curl -s http://localhost:8080/demo/inc | jq .
 
 {
   "id": "09c1c368-ad4d-4efe-a689-561c52878628",
@@ -33,7 +33,7 @@ $ curl http://localhost:8080/demo/inc
 ### Get a Responder
 
 ```
-$ curl http://localhost:8080/demo/res
+$ curl -s http://localhost:8080/demo/res | jq .
 
 {
   "id": "21",
