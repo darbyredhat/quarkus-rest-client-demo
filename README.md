@@ -15,28 +15,37 @@ You can run your application in dev mode that enables live coding using:
 
 ### Get an Incident
 
-curl http://localhost:8080/demo/inc
+```
+$ curl http://localhost:8080/demo/inc
 
+{
+  "id": "09c1c368-ad4d-4efe-a689-561c52878628",
+  "lat": "34.22112126003808",
+  "lon": "-77.86961293038925",
+  "numberOfPeople": 6,
+  "status": "RESCUED",
+  "timestamp": 1594065598640,
+  "victimName": "Kaylee Echevarria",
+  "victimPhoneNumber": "(336) 555-9105"
+}
+```
 
 ### Get a Responder
 
-curl http://localhost:8080/demo/res
+```
+$ curl http://localhost:8080/demo/res
 
+{
+  "id": "21",
+  "name": "Adeline Gonzalez",
+  "phoneNumber": "(336) 555-4312",
+  "latitude": 34.2462,
+  "longitude": -77.9521,
+  "boatCapacity": 8,
+  "medicalKit": true,
+  "available": true,
+  "person": false,
+  "enrolled": true
+}
+```
 
-## Packaging and running the application
-
-The application can be packaged using `./mvnw package`.
-It produces the `code-with-quarkus-1.0.0-SNAPSHOT-runner.jar` file in the `/target` directory.
-Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/lib` directory.
-
-The application is now runnable using `java -jar target/code-with-quarkus-1.0.0-SNAPSHOT-runner.jar`.
-
-## Creating a native executable
-
-You can create a native executable using: `./mvnw package -Pnative`.
-
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using: `./mvnw package -Pnative -Dquarkus.native.container-build=true`.
-
-You can then execute your native executable with: `./target/code-with-quarkus-1.0.0-SNAPSHOT-runner`
-
-If you want to learn more about building native executables, please consult https://quarkus.io/guides/building-native-image.

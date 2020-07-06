@@ -37,7 +37,7 @@ public class ExampleResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Responder resDemo() {
 
-        return responderServiceClient.getResponder("1");
+        return responderServiceClient.getResponder("21");
     }
 
 }
