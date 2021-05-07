@@ -2,7 +2,7 @@
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
-Demo of REST client for Incident Service and Responder Service
+EZ Demo of REST client for Incident Service and Responder Service
 
 ![](quarkus-client-demo.jpeg)
 
